@@ -12,7 +12,6 @@
         android:id="@+id/editText_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:hint="enter login"
         app:layout_constraintBottom_toTopOf="@id/editText_password"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -23,8 +22,8 @@
         android:id="@+id/editText_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:hint="enter password"
+        android:inputType="textPassword"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editText_login" />
@@ -35,7 +34,6 @@
         android:layout_height="wrap_content"
         android:text="Enter"
         android:layout_marginRight="2dp"
-        android:elevation="2dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/btn_reg"
         app:layout_constraintTop_toBottomOf="@id/editText_password"/>
@@ -46,7 +44,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="2dp"
         android:text="Registration"
-        android:elevation="2dp"
         app:layout_constraintLeft_toRightOf="@id/btn_enter"
         app:layout_constraintTop_toBottomOf="@id/editText_password"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -55,10 +52,21 @@
         android:id="@+id/btn_backPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="2dp"
         android:text="recover password"
         app:layout_constraintTop_toBottomOf="@id/btn_enter"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
+    <TextView
+        android:id="@+id/textView_backPass"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="New password"
+        android:text=""
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/btn_backPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

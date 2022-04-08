@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MVP_HomeWork</string>
+    <string name="whenLogAndPasCorrect">Login and Password Correct. Well done!</string>
 </resources>
