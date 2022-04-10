@@ -30,9 +30,9 @@ class Presenter: Contract.Presenter {
                     currentResult = true
                     errorText = ""
                 } else {
-                    view?.setError("Неверный пароль!!")
+                    view?.setError("Incorrect password!!")
                     currentResult = false
-                    errorText = "Неверный пароль"
+                    errorText = "Incorrect password"
                 }
             }
 
@@ -48,10 +48,15 @@ class Presenter: Contract.Presenter {
     }
 
     override fun onRegistration() {
-        TODO("Not yet implemented")
+
+
+
+
     }
 
     private fun checkCredentials(login: String, password: String): Boolean {
+
+
         return login == password
     }
 

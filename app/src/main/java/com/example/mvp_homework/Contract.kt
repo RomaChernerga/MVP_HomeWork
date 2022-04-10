@@ -7,8 +7,6 @@ class Contract {
         fun showProgress()
         fun hideProgress()
         fun setSuccess()
-
-
     }
 
     interface Presenter {
