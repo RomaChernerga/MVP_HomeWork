@@ -6,7 +6,6 @@ import android.content.DialogInterface
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
@@ -24,16 +23,16 @@ class MyDialogFragment : DialogFragment() {
             val editNewPas = view.findViewById<EditText>(R.id.edit_new_pass)
 
         return androidx.appcompat.app.AlertDialog.Builder(requireActivity())
-            .setMessage("Alert dialog")
+            .setMessage("Enter new password:")
             .setView(view)
-            .setTitle("Title")
+//            .setTitle("Title")
             .setPositiveButton("OK"
             ) { dialog: DialogInterface?, which: Int ->
                 MyPreferencesUserValue(requireActivity()).userValue = editNewPas.text.toString()
                 Toast.makeText(context, "Новый пароль ${editNewPas.text} сохранен", Toast.LENGTH_SHORT).show()
 
             }
-            .setNegativeButton("Cansel"
+            .setNegativeButton("Cancel"
             ) { dialog: DialogInterface?, which: Int ->
                 Toast.makeText(requireActivity(), "Отмена", Toast.LENGTH_SHORT).show()
             }

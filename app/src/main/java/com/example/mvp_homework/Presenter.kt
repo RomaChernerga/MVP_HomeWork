@@ -9,6 +9,9 @@ class Presenter: Contract.Presenter {
     private val uiHandler = Handler(Looper.getMainLooper())
     private var currentResult: Boolean = false
     private var errorText: String = ""
+    private var passwordSaved = MainActivity::savedPassword
+
+
 
     override fun onAttach(view: Contract.View) {
         this.view = view
@@ -35,7 +38,6 @@ class Presenter: Contract.Presenter {
                     errorText = "Incorrect password"
                 }
             }
-
         }.start()
     }
 
@@ -43,21 +45,12 @@ class Presenter: Contract.Presenter {
         //todo
     }
 
-    override fun onBackPassword() {
-        TODO("Not yet implemented")
-    }
-
-    override fun onRegistration() {
-
-
-
-
-    }
 
     private fun checkCredentials(login: String, password: String): Boolean {
-
-
-        return login == password
+        if(password == passwordSaved.toString()) {
+            return true
+        }
+        return false
     }
 
 }
